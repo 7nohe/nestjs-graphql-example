@@ -6,5 +6,11 @@
 
 /* tslint:disable */
 export abstract class IQuery {
-    abstract hello(): string | Promise<string>;
+    abstract todos(): Todo[] | Promise<Todo[]>;
+}
+
+export class Todo {
+    id: string;
+    title: string;
+    description?: string;
 }
